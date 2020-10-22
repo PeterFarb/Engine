@@ -1,0 +1,101 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Debug - Build All",
+            "command": "C:/Program Files/CMake/bin/cmake.exe",
+            "args": [
+                "--build", "${workspaceFolder}/build",
+                "--config", "Debug",
+                "--target", "all",
+                "--", "-j", "8"
+            ],
+            "options": {
+                "cwd": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn":["Debug - Configure All"]
+        },
+        {
+            "type": "shell",
+            "label": "Debug - Configure All",
+            "command": "C:/Program Files/CMake/bin/cmake.exe",
+            "args": [
+                "--no-warn-unused-cli", 
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE",
+                "-DCMAKE_BUILD_TYPE:STRING=Debug", 
+                "-DCMAKE_C_COMPILER:FILEPATH=C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/x86_64-w64-mingw32-gcc.exe",
+                "-DCMAKE_CXX_COMPILER:FILEPATH=C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/x86_64-w64-mingw32-g++.exe",
+                "-Hc:/Users/farbe/Documents/Projects/Engine",
+                "-Bc:/Users/farbe/Documents/Projects/Engine/build",
+                "-G",
+                "MinGW Makefiles"
+            ],
+            "options": {
+                "cwd": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Release - Build All",
+            "command": "C:/Program Files/CMake/bin/cmake.exe",
+            "args": [
+                "--build", "${workspaceFolder}/build",
+                "--config", "Release",
+                "--target", "all",
+                "--", "-j", "8"
+            ],
+            "options": {
+                "cwd": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn":["Release - Configure All"]
+        },
+        {
+            "type": "shell",
+            "label": "Release - Configure All",
+            "command": "C:/Program Files/CMake/bin/cmake.exe",
+            "args": [
+                "--no-warn-unused-cli", 
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE",
+                "-DCMAKE_BUILD_TYPE:STRING=Release", 
+                "-DCMAKE_C_COMPILER:FILEPATH=C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/x86_64-w64-mingw32-gcc.exe",
+                "-DCMAKE_CXX_COMPILER:FILEPATH=C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/x86_64-w64-mingw32-g++.exe",
+                "-Hc:/Users/farbe/Documents/Projects/Engine",
+                "-Bc:/Users/farbe/Documents/Projects/Engine/build",
+                "-G",
+                "MinGW Makefiles"
+            ],
+            "options": {
+                "cwd": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+    ],
+    "version": "2.0.0"
+}
