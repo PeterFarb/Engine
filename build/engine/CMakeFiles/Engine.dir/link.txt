@@ -1,2 +1,0 @@
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe qc ..\MinSizeRel\lib\libEngine-s-mr.a CMakeFiles/Engine.dir/src/Engine/Engine.cpp.obj CMakeFiles/Engine.dir/src/Engine/Texture.cpp.obj
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ranlib.exe ..\MinSizeRel\lib\libEngine-s-mr.a
