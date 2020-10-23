@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "Engine/Engine.h"
+#include <PFEngine/Engine.h>
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 
@@ -35,6 +35,11 @@ bool Engine::Initialize(int screen_width, int screen_height, const char *screen_
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
+
+    std::cout << glGetString(GL_VENDOR) << std::endl; 
+    std::cout << glGetString(GL_RENDERER) << std::endl; 
+    std::cout << glGetString(GL_VERSION) << std::endl; 
+    std::cout << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl; 
 
     return 0;
 }
